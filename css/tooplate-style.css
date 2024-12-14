@@ -586,6 +586,7 @@ ul {
   .right {
     flex-direction: column; /* Stack buttons vertically */
     align-items: center; /* Align buttons to the left */
+    
 }
 
 .linkedin button, .github button, .instagram button {
@@ -599,6 +600,8 @@ ul {
   position: relative;
   padding: 5px 15px;
   display: flex;
+  margin-left: 10px;
+  width: 200px;
   align-items: center;
   font-size: 17px;
   font-weight: 600;
@@ -652,6 +655,7 @@ ul {
   position: relative;
   padding: 5px 15px;
   display: flex;
+  width: 200px;
   align-items: center;
   font-size: 17px;
   font-weight: 600;
@@ -708,6 +712,7 @@ ul {
   display: flex;
   align-items: center;
   font-size: 17px;
+  width: 200px;
   font-weight: 600;
   text-decoration: none;
   cursor: pointer;
