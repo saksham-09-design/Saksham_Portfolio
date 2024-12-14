@@ -319,6 +319,7 @@ b, strong {
 .dark-mode .color-mode {
   color: #ffffff;
 }
+
 .dark-mode .owl-carousel .owl-nav button.owl-next,
 .dark-mode .owl-carousel .owl-nav button.owl-prev,
 .dark-mode .owl-carousel button.owl-dot {
@@ -787,7 +788,7 @@ ul {
   }
 
   .color-mode {
-    display: block;
+    display: none;
   }
 
   .about-image {
