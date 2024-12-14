@@ -320,6 +320,14 @@ b, strong {
   color: #ffffff;
 }
 
+.dark-mode .service{
+  color: white;
+}
+
+.dark-mode .grid-item p{
+  color: white;
+}
+
 .dark-mode .owl-carousel .owl-nav button.owl-next,
 .dark-mode .owl-carousel .owl-nav button.owl-prev,
 .dark-mode .owl-carousel button.owl-dot {
@@ -805,6 +813,54 @@ ul {
 
 .gmail button:hover::before {
   box-shadow: inset 0 0 0 10em rgb(245, 57, 57);
+}
+
+.service{
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  color: #1f1f1f;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 20px; /* Adjust gap as needed */
+  margin-left: 13%;
+  margin-right: 13%;
+  margin-bottom: 50px;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  transition: all .3s;
+  border-radius: 10px;
+}
+
+.grid-item p{
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: 15px;
+  margin-left: 20px;
+}
+
+.grid-item:hover {
+    box-shadow: 0px 0px 30px 1px rgba(239, 14, 14, 0.5);
+}
+
+.grid-item img {
+  width: 100px; /* Image takes full width */
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .main-container {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .example-2 .icon-content a[data-social="linkedin"] .filled,
