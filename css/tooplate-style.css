@@ -582,6 +582,14 @@ ul {
   .left span {
       font-size: 16px;
   }
+  .right {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Align buttons to the left */
+}
+
+.linkedin button, .github button, .instagram button {
+    margin-bottom: 10px; /* Add spacing between buttons */
+}
 }
 
 /* LinkedIn */ 
@@ -779,7 +787,7 @@ ul {
   }
 
   .color-mode {
-    display: none;
+    display: block;
   }
 
   .about-image {
