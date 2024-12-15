@@ -897,6 +897,10 @@ ul {
   box-shadow: 0px 0px 30px 1px rgba(239, 14, 14, 0.5);
 }
 
+.thumbnail-item:hover{
+  box-shadow: 0px 0px 30px 1px rgba(239, 14, 14, 0.5);
+}
+
 .main-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 columns */
