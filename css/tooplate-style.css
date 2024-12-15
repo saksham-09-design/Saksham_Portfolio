@@ -843,10 +843,20 @@ ul {
 
 .poster-item {
   flex: 1 1 calc(33.33% - 20px); /* 3 columns */
+  display: flex;
+  justify-content: center;
+}
+
+.poster-item:hover{
+  box-shadow: 0px 0px 30px 1px rgba(239, 14, 14, 0.5);
 }
 
 .logo-item {
   flex: 1 1 calc(25% - 20px); /* 4 columns */
+}
+
+.logo-item:hover{
+  box-shadow: 0px 0px 30px 1px rgba(239, 14, 14, 0.5);
 }
 
 .website-links {
@@ -858,15 +868,146 @@ ul {
   display: inline-block;
   margin: 0 10px;
   padding: 10px 20px;
-  background: #007BFF;
   color: white;
   text-decoration: none;
   border-radius: 5px;
 }
 
-.website-link:hover {
-  background: #0056b3;
+/* From Uiverse.io by OliverZeros */ 
+.website-link button {
+  all: unset;
 }
+
+.website-link .button {
+  position: relative;
+  display: inline-flex;
+  height: 3.5rem;
+  align-items: center;
+  border-radius: 9999px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-family: Segoe UI;
+  font-size: 1.2rem;
+  font-weight: 640;
+  color: #fafaf6;
+  letter-spacing: -0.06em;
+}
+
+.website-link .button-item {
+  background-color: transparent;
+  color: #1d1d1f;
+}
+
+.website-link .button-item .button-bg {
+  border-color: rgba(255, 208, 116);
+  background-color: rgba(255, 208, 116);
+}
+
+.website-link .button-inner,
+.website-link .button-inner-hover,
+.website-link .button-inner-static {
+  pointer-events: none;
+  display: block;
+}
+
+.website-link .button-inner {
+  position: relative;
+}
+
+.website-link .button-inner-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: translateY(70%);
+}
+
+.website-link .button-bg {
+  overflow: hidden;
+  border-radius: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+  transition: transform 1.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.website-link .button-bg,
+.website-link .button-bg-layer,
+.website-link .button-bg-layers {
+  display: block;
+}
+
+.website-link .button-bg-layers {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: -60%;
+  aspect-ratio: 1 / 1;
+  width: max(200%, 10rem);
+}
+
+.website-link .button-bg-layer {
+  border-radius: 9999px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(0);
+}
+
+.website-link .button-bg-layer.-purple {
+  background-color: rgba(163, 116, 255);
+}
+
+.website-link .button-bg-layer.-turquoise {
+  background-color: rgba(23, 241, 209);
+}
+
+.website-link .button-bg-layer.-yellow {
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 208, 116, var(--tw-bg-opacity));
+}
+
+.website-link .button:hover .button-inner-static {
+  opacity: 0;
+  transform: translateY(-70%);
+  transition:
+    transform 1.4s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 0.3s linear;
+}
+
+.website-link .button:hover .button-inner-hover {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    transform 1.4s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 1.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.website-link .button:hover .button-bg-layer {
+  transition:
+    transform 1.3s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 0.3s linear;
+}
+
+.website-link .button:hover .button-bg-layer-1 {
+  transform: scale(1);
+}
+
+.website-link .button:hover .button-bg-layer-2 {
+  transition-delay: 0.1s;
+  transform: scale(1);
+}
+
+.website-link .button:hover .button-bg-layer-3 {
+  transition-delay: 0.2s;
+  transform: scale(1);
+}
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -875,7 +1016,7 @@ ul {
   }
 
   .poster-item {
-      flex: 1 1 calc(100% - 20px); /* 1 column */
+      flex: 1 1 calc(100% - 20px);
   }
 }
 
