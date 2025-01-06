@@ -831,7 +831,7 @@ ul {
 
 .video-item, .thumbnail-item, .poster-item, .logo-item {
   background: transparent;
-  border: 1px solid #ddd;
+  /*border: 1px solid #ddd;*/
   border-radius: 5px;
   margin: 10px;
   transition: all .3s;
